@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Sign Up</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="Javascript" href="javascript.js">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="icon" href="images/favico.png">
+    
+</head>
+<style>
+      body{
+        margin:0;
+        padding:0;
+    }
+    .container img{
+       height:100px;
+       width:100px;
+    }
+    .links{
+        background-color: black;
+    }
+    .container{
+        position: relative;
+        margin-top: 0;
+        background-color: black;
+    }
+</style>
+<body>
+    <div id="home" class="navbar">
+        <!-- <img src="images/aaron-burden-QJDzYT_K8Xg-unsplash.jpg" alt="Home page image" height="650vh" width="100%"> -->
+        <div class="container">
+            <img src="images/logo1.png" alt="">
+       <div class="links">
+        <a href="index">Home</a>
+        <a href="about_us">About Us</a>
+        <a href="courses">Courses</a>
+        <a href="contributors">Contributors</a>
+        <a href="donate_us">Donate Us</a>
+       </div>
+       <a id="btn" href="account">Sign In/ Sign Up</a>
+        </div>
+
+
+
+    <div class="formcontainer">
+        <div class="tabheader">
+            <div class="active">Sign In</div>
+            <div>Sign Up</div>
+        </div>
+            <div class="tabcontent">
+                <div class="tabbody active">
+                <form class="formelement">
+                  
+                    <br><input type="text" name=username placeholder="username/Email">
+                    
+                    <br><input type="password" name="password " placeholder="password">
+                    <br>
+                    <input type="checkbox" id="rememberme">
+                    <label for="rememberme">remember me</label>
+                    <br><button>Sign In</button>
+                </form>
+                </div>
+                <div class="tabbody">
+                <form class="formelement">
+ 
+                    <br><input type="text" name="firstname" placeholder="firstname">
+                  
+                    </label>
+                    <br><input type="text" name="lastname" placeholder="lastname">
+                   
+                    <br><input type="text" name=username placeholder="username">
+                    
+                    <br><input type="email" name="email" id="email" placeholder="Email">
+                    
+                    <br><input type="password" name="password " placeholder="password">
+                    <br><button>Sign Up</button>
+                </form>
+                </div>
+            </div>
+        
+    </div>
+
+   <script>
+
+    
+
+let tabPanes = document.getElementsByClassName("tabheader")[0].getElementsByTagName("div");
+     
+     for(let i=0;i<tabPanes.length;i++){
+       tabPanes[i].addEventListener("click",function(){
+         document.getElementsByClassName("tabheader")[0].getElementsByClassName("active")[0].classList.remove("active");
+         tabPanes[i].classList.add("active");
+         
+         document.getElementsByClassName("tabcontent")[0].getElementsByClassName("active")[0].classList.remove("active");
+         document.getElementsByClassName("tabcontent")[0].getElementsByClassName("tabbody")[i].classList.add("active");
+       });
+     }
+                       
+ 
+ 
+
+   </script>
+
+
+<!-- <script src="myScript.js"></script> -->
+</body>
+</html>
